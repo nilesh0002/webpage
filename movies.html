@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieHub - Discover Movie</title>
+  
+</head>
+<body>
+<style>
+   /* style.css */
+
+   * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+      }
+      
+      /* Hero Section */
+      .hero {
+        position: relative;
+        height: 100vh;
+        background: url('hero-bg.jpg') no-repeat center center/cover;
+      }
+      
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+        padding: 20px;
+      }
+      
+      .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: #e50914;
+      }
+      
+      .hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        color: #d1d1d1;
+      }
+      
+      .cta-button {
+        padding: 15px 30px;
+        background-color: #e50914;
+        color: #ffffff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .cta-button:hover {
+        background-color: #b20710;
+      }
+      
+      /* Movies Section */
+      .movies {
+        padding: 50px 20px;
+        text-align: center;
+      }
+      
+      .movies h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #e50914;
+      }
+      
+      .movie-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      
+      .movie-card {
+        width: 300px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+      }
+      
+      .movie-bg {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        transition: transform 0.3s ease;
+      }
+      
+      .movie-card:hover .movie-bg {
+        transform: scale(1.1);
+      }
+      
+      .movie-trailer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .movie-card:hover .movie-trailer {
+        opacity: 1;
+      }
+      
+      .movie-info {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+      }
+      /* Mute Button Styling */
+.mute-button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: none; /* Hidden by default, shown on hover */
+}
+
+/* Show mute button when hovering over the card */
+.movie-card:hover .mute-button {
+  display: block;
+}
+
+</style>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Discover Your Next Favorite Movie</h1>
+        <p>Explore a world of cinema from the latest releases to timeless classics.</p>
+        <a href="#movies" class="cta-button">Explore Movies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Movies Section -->
+  <section class="movies" id="movies">
+    <h2>Featured Movies</h2>
+    <div class="movie-grid">
+      <!-- Movie 1 -->
+      <div class="movie-card">
+        <div class="movie-bg" style="background-image: url('./file.html/GOT.jpg');">
+          <video src="./file.html/GOT.mp4" class="movie-trailer" loop></video>
+          <button class="mute-button">🔊</button>
+          <div class="movie-info">
+            <h3>GOT</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Movie 2 -->
+      <div class="movie-card">
+        <div class="movie-bg" style="background-image: url('./file.html/JOKER.jpg');">
+          <video src="./file.html/JOKER.mp4" class="movie-trailer" loop></video>
+          <button class="mute-button">🔊</button>
+          <div class="movie-info">
+            <h3>JOKER</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Movie 3 -->
+      <div class="movie-card">
+        <div class="movie-bg" style="background-image: url('./file.html/BATMAN.jpg');">
+          <video src="/file.html/THE BATMAN.mp4" class="movie-trailer" loop></video>
+          <button class="mute-button">🔊</button>
+          <div class="movie-info">
+            <h3>THE BATMAN</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Movie 4 -->
+      <div class="movie-card">
+        <div class="movie-bg" style="background-image: url('/file.html/SPIDER.jpg');">
+          <video src="/file.html/SPIDERMAN.mp4" class="movie-trailer" loop></video>
+          <button class="mute-button">🔊</button>
+          <div class="movie-info">
+            <h3>SPIDERMAN</h3>
+          </div>
+        </div>
+      </div><div class="movie-card">
+        <div class="movie-bg" style="background-image: url(/file.html/MARVEL.jpg);">
+          <video src="/file.html/MAR.mp4" class="movie-trailer" loop></video>
+          <button class="mute-button">🔊</button>
+          <div class="movie-info">
+            <h3>MARVEL</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JavaScript file -->
+  <script src="script1.js"></script>
+</body>
+</html>
